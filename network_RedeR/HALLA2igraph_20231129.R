@@ -5,6 +5,11 @@
 ## just arrange the output format as "all_associations" from HALLA where only the first three columns needed.
 ## import "all_associations" from HALLA
 # all_associations
+# if (!require("BiocManager", quietly = TRUE))
+#   install.packages("BiocManager")
+# 
+# BiocManager::install("RedeR")
+
 rm(list=ls())
 library(igraph)
 library(ggraph)
