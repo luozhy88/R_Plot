@@ -18,3 +18,4 @@ ComplexHeatmap::Heatmap(test,row_names_side="left",cluster_rows = F,show_row_den
 
 # colors
 https://carto.com/carto-colors/
+https://colorbrewer2.org/
