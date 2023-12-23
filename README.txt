@@ -15,3 +15,6 @@ rownames(test) = paste("Gene", 1:20, sep = "")
 
 library(ComplexHeatmap)
 ComplexHeatmap::Heatmap(test,row_names_side="left",cluster_rows = F,show_row_dend = FALSE, show_heatmap_legend = FALSE,rect_gp = gpar(col="white",lwd=2))
+
+# colors
+https://carto.com/carto-colors/
