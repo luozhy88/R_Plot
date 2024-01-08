@@ -23,3 +23,6 @@ https://colorbrewer2.org/
 
 # 甘特图
 https://www.onlinegantt.com/#/gantt
+
+# 流程图在线画
+https://lucid.app/lucidspark
