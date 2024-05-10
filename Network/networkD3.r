@@ -1,3 +1,28 @@
+library(networkD3)
+
+# 数据准备
+MisLinks <- data.frame(source = c("a", "b", "c", "d"),
+                       target = c("b", "c", "d", "a"),
+                       value = c(1, 2, 3, 4))
+
+MisNodes <- data.frame(name = c("a", "b", "c", "d"),
+                       group = c(1, 2, 3, 4),
+                       size = c(10, 20, 30, 40),
+                       color = c("#ff0000", "#00ff00", "#0000ff", "#ff00ff"))
+rownames(MisNodes) <- MisNodes$name
+
+# 转换 source 和 target 列
+MisLinks$source <- match(MisLinks$source, rownames(MisNodes)) - 1
+MisLinks$target <- match(MisLinks$target, rownames(MisNodes)) - 1
+
+# 创建网络图
+net <- forceNetwork(Links = MisLinks, Nodes = MisNodes, Source = "source", Group = "group",
+                    Target = "target", Value = "value", NodeID = "name",
+                    Nodesize = "size")
+print(net)
+
+#####################################################################################
+
 
 # install.packages(c("igraph", "htmlwidgets", "networkD3"))
 library(htmlwidgets)
