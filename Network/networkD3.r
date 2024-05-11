@@ -95,5 +95,6 @@ forceNetwork(Links = nk.edge, Nodes = nk.node, Source = "source", Target = "targ
              colourScale = JS(my_color),
              fontFamily="Times",charge = -250,
              opacity = 0.4, legend = T, bounded = TRUE) #%>% saveNetwork(file = 'Net1.html')
+ webshot(paste0(datapath,"/","Herb-tagMol-tagGen.network.html") , paste0(datapath,"/","Herb-tagMol-tagGen.network.pdf"))
 
 
